@@ -1,8 +1,8 @@
 class MoshEaw < Formula
   desc "Remote terminal application with East Asian Width hack"
   homepage "https://mosh.org"
-  license "GPL-3.0"
-  head "https://github.com/ykasap/mosh.git", :branch => 'east-asian-width', :shallow => false
+  license "GPL-3.0-or-later"
+  head "https://github.com/ykasap/mosh.git", branch: "east-asian-width", shallow: false
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
