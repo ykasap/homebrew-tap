@@ -7,8 +7,8 @@ class MoshEaw < Formula
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "pkg-config" => :build
-  depends_on "tmux" => :build
-  depends_on "openssl@1.1"
+#  depends_on "tmux" => :build
+#  depends_on "openssl@1.1"
   depends_on "protobuf"
 
   uses_from_macos "ncurses"
@@ -16,6 +16,9 @@ class MoshEaw < Formula
 
   def install
     ENV.cxx11
+
+    # https://github.com/protocolbuffers/protobuf/issues/9947
+    ENV.append_to_cflags "-DNDEBUG"
 
     # teach mosh to locate mosh-client without referring
     # PATH to support launching outside shell e.g. via launcher
