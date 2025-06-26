@@ -10,7 +10,7 @@ class MoshEaw < Formula
   depends_on "automake" => :build
 
   depends_on "pkg-config" => :build
-  depends_on "protobuf@3"
+  depends_on "protobuf"
 
   uses_from_macos "ncurses"
   uses_from_macos "zlib"
